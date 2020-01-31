@@ -41,7 +41,7 @@ namespace HW1
 
         private void AddItem(object sender, EventArgs e)
         {
-            Phones.Add(new Phone { Title = "Galaxy S8", Company = "Samsung", Price = 48000 });
+            Phones.Add(new Phone { Title = "ппп", Company = "аааа", Price = 48000 });
         }
         // удаление выделенного объекта
         private void RemoveItem(object sender, EventArgs e)
