@@ -3,10 +3,23 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:d="http://xamarin.com/schemas/2014/forms/design"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:local="clr-namespace:HW1;assembly=HW1"
              mc:Ignorable="d"
              x:Class="HW1.MainPage">
   <!--Pages can be added as references or inline-->
-  <ContentPage Title="Tab 1" />
-  <ContentPage Title="Tab 2" />
-  <ContentPage Title="Tab 3" />
+    <NavigationPage Title="Каталог" IconImageSource="schedule.png">
+        <x:Arguments>
+            <local:Page1 />
+        </x:Arguments>
+    </NavigationPage>
+    <NavigationPage Title="Корзина" IconImageSource="schedule.png">
+        <x:Arguments>
+            <local:Page2 />
+        </x:Arguments>
+    </NavigationPage>
+    <NavigationPage Title="Профиль" IconImageSource="schedule.png">
+        <x:Arguments>
+            <local:Page3 />
+        </x:Arguments>
+    </NavigationPage>
 </TabbedPage>
