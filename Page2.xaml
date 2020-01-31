@@ -6,10 +6,10 @@
              mc:Ignorable="d"
              x:Class="HW1.Page2">
     <ContentPage.Content>
-        <StackLayout>
-            <Label Text="2"
-                VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" />
-        </StackLayout>
+        <ScrollView>
+            <StackLayout>
+                
+            </StackLayout>
+        </ScrollView>
     </ContentPage.Content>
 </ContentPage>

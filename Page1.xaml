@@ -3,13 +3,14 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:d="http://xamarin.com/schemas/2014/forms/design"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:local="clr-namespace:HW1;assembly=HW1"
              mc:Ignorable="d"
              x:Class="HW1.Page1">
     <ContentPage.Content>
+
         <StackLayout>
-            <Label Text="1"
-                VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" />
+            <Label Text="Список моделей" HorizontalOptions="Center" FontSize="Large" />
+            <ListView x:Name="phonesList" ItemsSource="{Binding Monkeys}" />
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

@@ -7,17 +7,17 @@
              mc:Ignorable="d"
              x:Class="HW1.MainPage">
   <!--Pages can be added as references or inline-->
-    <NavigationPage Title="Каталог" IconImageSource="schedule.png">
+    <NavigationPage Title="Каталог">
         <x:Arguments>
             <local:Page1 />
         </x:Arguments>
     </NavigationPage>
-    <NavigationPage Title="Корзина" IconImageSource="schedule.png">
+    <NavigationPage Title="Корзина" >
         <x:Arguments>
             <local:Page2 />
         </x:Arguments>
     </NavigationPage>
-    <NavigationPage Title="Профиль" IconImageSource="schedule.png">
+    <NavigationPage Title="Профиль" >
         <x:Arguments>
             <local:Page3 />
         </x:Arguments>

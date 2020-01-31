@@ -6,10 +6,10 @@
              mc:Ignorable="d"
              x:Class="HW1.Page3">
     <ContentPage.Content>
-        <StackLayout>
-            <Label Text="3"
-                VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" />
+        <StackLayout Spacing="10"  Margin="10">
+            <Entry  Placeholder="Адрес" ClearButtonVisibility="WhileEditing" PlaceholderColor="Red"  TextColor="Green"  IsTextPredictionEnabled="true"/>
+            <Entry Keyboard="Telephone" Placeholder="Телефон" PlaceholderColor="Red" ClearButtonVisibility="WhileEditing" TextColor="Green" IsTextPredictionEnabled="true"/>
+            <Entry Keyboard="Email" Placeholder="Email" PlaceholderColor="Red"  TextColor="Green" IsTextPredictionEnabled="true"/>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>
