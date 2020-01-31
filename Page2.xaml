@@ -5,11 +5,45 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              mc:Ignorable="d"
              x:Class="HW1.Page2">
-    <ContentPage.Content>
-        <ScrollView>
-            <StackLayout>
-                
+    <ContentPage.Content >
+        <StackLayout BackgroundColor = "Blue">
+            <Label Text="«In God We Trust»" TextColor="Pink" FontSize="27" FontAttributes="Bold">
+                <Label.FontFamily>
+                    <OnPlatform x:TypeArguments="x:String">
+                        <On Platform="Android" Value="KaushanScript-Regular.ttf#KaushanScript" />
+                    </OnPlatform>
+                </Label.FontFamily>
+            </Label>
+            <Label Text="{Binding Source={x:Reference Name=phonesList}, Path=SelectedItem.Title}"
+            FontSize="Large" />
+            <ListView x:Name="phonesList"
+              HasUnevenRows="True"
+              ItemsSource="{Binding Phones}">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <StackLayout Orientation="Horizontal" BackgroundColor = "Black">
+                                <Image Source="{Binding ImagePath}" WidthRequest="45" HeightRequest="60" />
+                                <StackLayout>
+                                    <Label Text="{Binding Title}" FontSize="18" TextColor="Red" FontAttributes="Bold" BackgroundColor = "DarkCyan"/>
+                                    <Label Text="{Binding Company}" FontSize="17"  LineBreakMode="WordWrap" TextColor="DarkKhaki" BackgroundColor = "DarkCyan"/>
+                                    <Label Text="{Binding Price}" FontSize="20" FontAttributes="Italic, Bold" TextColor="Wheat" BackgroundColor = "DarkCyan"/>
+                                </StackLayout>
+                            </StackLayout>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+            <StackLayout  HorizontalOptions="End" >
+                <Label Text="Вы накупите на: " TextColor="Pink" FontSize="27" FontAttributes="Bold">
+                    <Label.FontFamily>
+                        <OnPlatform x:TypeArguments="x:String">
+                            <On Platform="Android" Value="KaushanScript-Regular.ttf#KaushanScript" />
+                        </OnPlatform>
+                    </Label.FontFamily>
+                </Label>
+                <Button Clicked="RemoveItem" Text="Удалить выбраную воду" />
             </StackLayout>
-        </ScrollView>
+        </StackLayout>
     </ContentPage.Content>
 </ContentPage>

@@ -4,10 +4,14 @@
              xmlns:d="http://xamarin.com/schemas/2014/forms/design"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              xmlns:local="clr-namespace:HW1;assembly=HW1"
+             BarBackgroundColor="Red"
+             BarTextColor="White"
+             Title="Tabbed Sample"
              mc:Ignorable="d"
              x:Class="HW1.MainPage">
-  <!--Pages can be added as references or inline-->
-    <NavigationPage Title="Каталог">
+    
+
+    <NavigationPage Title="Каталог" >
         <x:Arguments>
             <local:Page1 />
         </x:Arguments>
@@ -23,3 +27,4 @@
         </x:Arguments>
     </NavigationPage>
 </TabbedPage>
+    

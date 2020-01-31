@@ -6,11 +6,28 @@
              xmlns:local="clr-namespace:HW1;assembly=HW1"
              mc:Ignorable="d"
              x:Class="HW1.Page1">
-    <ContentPage.Content>
 
-        <StackLayout>
-            <Label Text="Список моделей" HorizontalOptions="Center" FontSize="Large" />
-            <ListView x:Name="phonesList" ItemsSource="{Binding Monkeys}" />
-        </StackLayout>
-    </ContentPage.Content>
+    <StackLayout BackgroundColor = "DarkCyan">
+        <Label Text="{Binding Source={x:Reference Name=phonesList}, Path=SelectedItem.Title}"
+            FontSize="Large" />
+        <ListView x:Name="phonesList"
+              HasUnevenRows="True"
+              ItemsSource="{Binding Phones}"
+              ItemTapped="OnItemTapped">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <StackLayout Orientation="Horizontal">
+                            <Image Source="{Binding ImagePath}" WidthRequest="45" HeightRequest="60" />
+                            <StackLayout>
+                                <Label Text="{Binding Title}" FontSize="18" TextColor="Red" FontAttributes="Bold"/>
+                                <Label Text="{Binding Company}" FontSize="17"  LineBreakMode="WordWrap" TextColor="DarkKhaki"/>
+                                <Label Text="{Binding Price}" FontSize="20" FontAttributes="Italic, Bold" TextColor="Wheat"/>
+                            </StackLayout>
+                        </StackLayout>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+    </StackLayout>
 </ContentPage>
